@@ -78,22 +78,22 @@ namespace ProblemLibrary.UnitTest
         [TestMethod]
         public void C0TestMethod1()
         {
-
+            throw new System.NotImplementedException();
         }
         [TestMethod]
         public void C1TestMethod1()
         {
-
+            throw new System.NotImplementedException();
         }
         [TestMethod]
         public void C2TestMethod1()
         {
-
+            throw new System.NotImplementedException();
         }
         [TestMethod]
         public void MCDCTestMethod1()
         {
-
+            throw new System.NotImplementedException();
         }
         #endregion
     }
