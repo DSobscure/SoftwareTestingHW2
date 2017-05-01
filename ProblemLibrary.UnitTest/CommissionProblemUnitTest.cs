@@ -17,22 +17,22 @@ namespace ProblemLibrary.UnitTest
             Assert.IsTrue(Problem.CommissionProblem(20 , 20, 20, out resultMessage));
             Assert.AreEqual("400", resultMessage);
 
-            Assert.IsFalse(Problem.NextDateProblem(0, 50, 50, out resultMessage));
+            Assert.IsFalse(Problem.CommissionProblem(0, 50, 50, out resultMessage));
             Assert.AreEqual("輸入不合法", resultMessage);
-            Assert.IsFalse(Problem.NextDateProblem(71, 50, 50, out resultMessage));
-            Assert.AreEqual("輸入不合法", resultMessage);
-
-            Assert.IsFalse(Problem.NextDateProblem(50, 0, 50, out resultMessage));
-            Assert.AreEqual("輸入不合法", resultMessage);
-            Assert.IsFalse(Problem.NextDateProblem(50, 81, 50, out resultMessage));
+            Assert.IsFalse(Problem.CommissionProblem(71, 50, 50, out resultMessage));
             Assert.AreEqual("輸入不合法", resultMessage);
 
-            Assert.IsFalse(Problem.NextDateProblem(50, 50, 0, out resultMessage));
+            Assert.IsFalse(Problem.CommissionProblem(50, 0, 50, out resultMessage));
             Assert.AreEqual("輸入不合法", resultMessage);
-            Assert.IsFalse(Problem.NextDateProblem(50, 50, 91, out resultMessage));
+            Assert.IsFalse(Problem.CommissionProblem(50, 81, 50, out resultMessage));
             Assert.AreEqual("輸入不合法", resultMessage);
 
-            Assert.IsFalse(Problem.NextDateProblem(71, 81, 91, out resultMessage));
+            Assert.IsFalse(Problem.CommissionProblem(50, 50, 0, out resultMessage));
+            Assert.AreEqual("輸入不合法", resultMessage);
+            Assert.IsFalse(Problem.CommissionProblem(50, 50, 91, out resultMessage));
+            Assert.AreEqual("輸入不合法", resultMessage);
+
+            Assert.IsFalse(Problem.CommissionProblem(71, 81, 91, out resultMessage));
             Assert.AreEqual("輸入不合法", resultMessage);
         }
         #endregion
