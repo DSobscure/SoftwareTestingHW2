@@ -50,6 +50,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CommissionProblemUnitTest.cs" />
+    <Compile Include="NextDateProblemUnitTest.cs" />
+    <Compile Include="TriangleProblemUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
