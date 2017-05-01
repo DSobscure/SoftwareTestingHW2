@@ -9,7 +9,7 @@ namespace ProblemLibrary
             throw new NotImplementedException("Problem TriangleProblem");
         }
 
-        public static bool NextDateProblem(int month, int day, int year, out string resultMessage)
+        public static bool NextDateProblem(int year, int month, int day, out string resultMessage)
         {
             throw new NotImplementedException("Problem NextDateProblem");
         }
