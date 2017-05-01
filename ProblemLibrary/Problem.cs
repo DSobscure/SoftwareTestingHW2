@@ -36,7 +36,77 @@ namespace ProblemLibrary
 
         public static bool NextDateProblem(int year, int month, int day, out string resultMessage)
         {
-            throw new NotImplementedException("Problem NextDateProblem");
+            bool isLegal = true, isChangeMonth = false, isChangeYear = false;
+            if (month < 1 || month > 12)
+            {
+                resultMessage = "日期不合法";
+                isLegal = false;
+            }
+            if(isLegal)
+            {
+                switch (month)
+                {
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 10:
+                    case 12:
+                        if (day < 1 || day > 31)
+                            isLegal = false;
+                        if (day == 31)
+                        {
+                            isChangeMonth = true;
+                            if (month == 12)
+                                isChangeYear = true;
+                        }
+                        break;
+                    case 2:
+                        if (year % 4 == 0 && (!(year % 100 == 0) || (year % 400 == 0)))
+                        {
+                            if (day < 1 || day > 29)
+                                isLegal = false;
+                            if (day == 29)
+                                isChangeMonth = true;
+                        }
+                        else
+                        {
+                            if (day < 1 || day > 28)
+                                isLegal = false;
+                            if (day == 28)
+                                isChangeMonth = true;
+                        }
+                        break;
+                    case 4:
+                    case 6:
+                    case 9:
+                    case 11:
+                        if (day < 1 || day > 30)
+                            isLegal = false;
+                        if (day == 30)
+                            isChangeMonth = true;
+                        break;
+                    default:
+                        isLegal = false;
+                        break;
+                }
+            }
+            if(isLegal)
+            {
+                if (isChangeYear)
+                    resultMessage = $"{year + 1}/1/1";
+                else if (isChangeMonth)
+                    resultMessage = $"{year}/{month + 1}/1";
+                else
+                    resultMessage = $"{year}/{month}/{day + 1}";
+                return true;
+            }
+            else
+            {
+                resultMessage = "日期不合法";
+                return false;
+            }
         }
 
         public static bool CommissionProblem(int lockCount, int stockCount, int barrelCount, out string resultMessage)

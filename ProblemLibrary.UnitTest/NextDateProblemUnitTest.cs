@@ -43,9 +43,9 @@ namespace ProblemLibrary.UnitTest
             Assert.IsTrue(Problem.NextDateProblem(2100, 2, 28, out resultMessage));
             Assert.AreEqual("2100/3/1", resultMessage);
             Assert.IsTrue(Problem.NextDateProblem(2400, 2, 28, out resultMessage));
-            Assert.AreEqual("2100/2/29", resultMessage);
+            Assert.AreEqual("2400/2/29", resultMessage);
             Assert.IsTrue(Problem.NextDateProblem(2400, 2, 29, out resultMessage));
-            Assert.AreEqual("2100/3/1", resultMessage);
+            Assert.AreEqual("2400/3/1", resultMessage);
 
             Assert.IsFalse(Problem.NextDateProblem(2017, 0, 1, out resultMessage));
             Assert.AreEqual("日期不合法", resultMessage);
