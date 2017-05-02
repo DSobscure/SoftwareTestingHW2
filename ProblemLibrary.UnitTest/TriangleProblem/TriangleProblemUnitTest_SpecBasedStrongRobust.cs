@@ -48,7 +48,7 @@ namespace ProblemLibrary.UnitTest.TriangleProblem
             Assert.AreEqual("邊長不合法", resultMessage);
         }
         [TestMethod]
-        public void TP_StrongRobustTestMethodc_SideMinMinus1()
+        public void TP_StrongRobustTestMethodC_SideMinMinus1()
         {
             string resultMessage;
             Assert.IsFalse(Problem.TriangleProblem(1, 1, -1, out resultMessage));

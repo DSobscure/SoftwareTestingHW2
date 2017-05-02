@@ -37,11 +37,6 @@ namespace ProblemLibrary
         public static bool NextDateProblem(int year, int month, int day, out string resultMessage)
         {
             bool isLegal = true, isChangeMonth = false, isChangeYear = false;
-            if (month < 1 || month > 12)
-            {
-                resultMessage = "日期不合法";
-                isLegal = false;
-            }
             if(isLegal)
             {
                 switch (month)
