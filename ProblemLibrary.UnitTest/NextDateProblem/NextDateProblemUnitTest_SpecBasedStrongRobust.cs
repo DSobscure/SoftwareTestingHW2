@@ -145,6 +145,7 @@ namespace ProblemLibrary.UnitTest.NextDateProblem
             Assert.IsFalse(Problem.NextDateProblem(2017, 1, 0, out resultMessage));
             Assert.AreEqual("日期不合法", resultMessage);
         }
+        [TestMethod]
         public void NDP_StrongRobustTestMethod非法3()
         {
             string resultMessage;
