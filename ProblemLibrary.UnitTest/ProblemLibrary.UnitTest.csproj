@@ -52,22 +52,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="CommissionProblem\CommissionProblemUnitTest_SpecBasedStrongRobust.cs" />
     <Compile Include="CommissionProblem\CommissionProblemUnitTest_CodeBasedC0.cs" />
     <Compile Include="CommissionProblem\CommissionProblemUnitTest_CodeBasedC1.cs" />
     <Compile Include="CommissionProblem\CommissionProblemUnitTest_CodeBasedC2.cs" />
     <Compile Include="CommissionProblem\CommissionProblemUnitTest_CodeBasedMCDC.cs" />
-    <Compile Include="NextDateProblem\NextDateProblemUnitTest_SpecBasedStrongRobust.cs" />
-    <Compile Include="NextDateProblem\NextDateProblemUnitTest_CodeBasedC0.cs" />
-    <Compile Include="NextDateProblem\NextDateProblemUnitTest_CodeBasedC1.cs" />
+    <Compile Include="CommissionProblem\CommissionProblemUnitTest_SpecBasedStrongRobust.cs" />
     <Compile Include="NextDateProblem\NextDateProblemUnitTest_CodeBasedC2.cs" />
-    <Compile Include="NextDateProblem\NextDateProblemUnitTest_CodeBasedMCDC.cs" />
-    <Compile Include="TriangleProblem\TriangleProblemUnitTest_CodeBaedC0.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TriangleProblem\TriangleProblemUnitTest_SpecBasedStrongRobust.cs" />
-    <Compile Include="TriangleProblem\TriangleProblemUnitTest_CodeBaedC1.cs" />
     <Compile Include="TriangleProblem\TriangleProblemUnitTest_CodeBaedC2.cs" />
-    <Compile Include="TriangleProblem\TriangleProblemUnitTest_CodeBaedMCDC.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProblemLibrary\ProblemLibrary.csproj">

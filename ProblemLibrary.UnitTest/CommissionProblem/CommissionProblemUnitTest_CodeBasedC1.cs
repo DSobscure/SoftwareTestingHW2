@@ -31,8 +31,8 @@ namespace ProblemLibrary.UnitTest.CommissionProblem
         public void CP_C1TestMethod4()
         {
             string resultMessage;
-            Assert.IsTrue(Problem.CommissionProblem(10, 5, 48, out resultMessage));
-            Assert.AreEqual("270", resultMessage);
+            Assert.IsTrue(Problem.CommissionProblem(20, 20, 20, out resultMessage));
+            Assert.AreEqual("400", resultMessage);
         }
     }
 }
