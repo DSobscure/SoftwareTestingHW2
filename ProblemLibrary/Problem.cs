@@ -37,57 +37,54 @@ namespace ProblemLibrary
         public static bool NextDateProblem(int year, int month, int day, out string resultMessage)
         {
             bool isLegal = true, isChangeMonth = false, isChangeYear = false;
-            if(isLegal)
+            switch (month)
             {
-                switch (month)
-                {
-                    case 1:
-                    case 3:
-                    case 5:
-                    case 7:
-                    case 8:
-                    case 10:
-                    case 12:
-                        if (day < 1 || day > 31)
-                            isLegal = false;
-                        if (day == 31)
-                        {
-                            isChangeMonth = true;
-                            if (month == 12)
-                                isChangeYear = true;
-                        }
-                        break;
-                    case 2:
-                        if (year % 4 == 0 && (!(year % 100 == 0) || (year % 400 == 0)))
-                        {
-                            if (day < 1 || day > 29)
-                                isLegal = false;
-                            if (day == 29)
-                                isChangeMonth = true;
-                        }
-                        else
-                        {
-                            if (day < 1 || day > 28)
-                                isLegal = false;
-                            if (day == 28)
-                                isChangeMonth = true;
-                        }
-                        break;
-                    case 4:
-                    case 6:
-                    case 9:
-                    case 11:
-                        if (day < 1 || day > 30)
-                            isLegal = false;
-                        if (day == 30)
-                            isChangeMonth = true;
-                        break;
-                    default:
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    if (day < 1 || day > 31)
                         isLegal = false;
-                        break;
-                }
+                    if (day == 31)
+                    {
+                        isChangeMonth = true;
+                        if (month == 12)
+                            isChangeYear = true;
+                    }
+                    break;
+                case 2:
+                    if (year % 4 == 0 && (!(year % 100 == 0) || (year % 400 == 0)))
+                    {
+                        if (day < 1 || day > 29)
+                            isLegal = false;
+                        if (day == 29)
+                            isChangeMonth = true;
+                    }
+                    else
+                    {
+                        if (day < 1 || day > 28)
+                            isLegal = false;
+                        if (day == 28)
+                            isChangeMonth = true;
+                    }
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    if (day < 1 || day > 30)
+                        isLegal = false;
+                    if (day == 30)
+                        isChangeMonth = true;
+                    break;
+                default:
+                    isLegal = false;
+                    break;
             }
-            if(isLegal)
+            if (isLegal)
             {
                 if (isChangeYear)
                     resultMessage = $"{year + 1}/1/1";
